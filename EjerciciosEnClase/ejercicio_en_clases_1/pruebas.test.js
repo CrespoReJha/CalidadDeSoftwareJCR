@@ -17,7 +17,12 @@ describe('verificarFormacionAcademica', () => {
   });
 
   test('3 diplomados => 4 puntos (2 + 1 + 1)', () => {
-    expect(verificarFormacionAcademica(2, 0, 0, 0)).toBe(3);
+    expect(verificarFormacionAcademica(3, 0, 0, 0)).toBe(4);
+  });
+
+
+  test('sobrepasando el maximo de puntos para diplomados => max: 4 puntos', () => {
+    expect(verificarFormacionAcademica(4, 0, 0, 0)).toBe(4);
   });
 
 });
