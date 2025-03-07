@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ejercicio en Clases 1</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    thead th {
+      background-color: black;
+      color: white;
+      text-align: center;
+    }
+
+    th, td {
+      border: 1px solid black;
+    }
+    
+    .subtotal-row {
+      font-weight:bold;
+      text-align: end;
+    }
+
+    .action-buttons {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .action-buttons button {
+      margin: 0 10px;
+      padding: 6px 12px;
+      background-color: aqua;
+    }
+  </style>
+</head>
+<body>
+<table>
+  <thead>
+    <tr>
+      <th style="width: 25%;">CATEGORÍA</th>
+      <th style="width: 45%;">PARÁMETROS</th>
+      <th style="width: 10%;">CANTIDAD</th>
+      <th style="width: 10%;">PUNTAJE</th>
+      <th style="width: 10%;">MÁX</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- A. FORMACIÓN ACADÉMICA -->
+    <tr>
+      <td colspan="5"><strong>A. FORMACIÓN ACADÉMICA</strong></td>
+    </tr>
+    <tr>
+      <td rowspan="4">A.Formacion Profesional</td>
+      <td>1. Diplomado: 2 puntos (por cada diplomado adicional se asignará 1)</td>
+      <td><input type="number" min="0" value="0" ></td>
+      <td><input type="number" min="0" value="0"  disabled></td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>2. Especialidad: 4 puntos (por una especialidad adicional se asignarán 2)</td>
+      <td><input type="number" min="0" value="0" ></td>
+      <td><input type="number" min="0" value="0"  disabled></td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>3. Maestría: 8 puntos (por una maestría adicional se asignarán 3)</td>
+      <td><input type="number" min="0" value="0" ></td>
+      <td><input type="number" min="0" value="0"  disabled></td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>4. Doctorado: 12 puntos</td>
+      <td><input type="number" min="0" value="0" ></td>
+      <td><input type="number" min="0" value="0"  disabled></td>
+      <td>12</td>
+    </tr>
+    <tr class="subtotal-row">
+      <td colspan="3">Subtotal (hasta 12 puntos)</td>
+      <td><input type="number" min="0" value="0"  disabled></td>
+    </tr>
+
+    <tr>
+      <td colspan="5"><strong>B. ACTUALIZACIÓN ACADÉMICA</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Actualizacion Academica en Derecho</strong> (Se consedera aquellos eventos realizados en los ultimos 8 años a partir del 2017)</td>
+      <td>1. Asistencia a programas, cursos, seminarios, talleres y congresos relacionados a área de Derecho: 0.5</td>
+      <td><input type="number" min="0" value="0" ></td>
+      <td><input type="number" min="0" value="0"  disabled></td>
+      <td>6</td>
+    </tr>
+    <tr class="subtotal-row">
+      <td colspan="3">Subtotal (hasta 6 puntos)</td>
+      <td><input type="number" min="0" value="0"  disabled></td>
+    </tr>
+
+    <tr>
+      <td colspan="5"><strong>C. EXPERIENCIA PROFESIONAL</strong></td>
+    </tr>
+    <tr>
+      <td>Experiencia General</td>
+      <td>1. Antiguedad en el ejercicio de la porfesion de abogada o abogado : 1 punto por cada año, desde el registro en el RPA</td>
+      <td><input type="number" min="0" value="0" ></td>
+      <td><input type="number" min="0" value="0"  disabled></td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td rowspan="2">Experiencia Específica</td>
+      <td> 2. Experiencia como servidor publico en el Organo Judicial o Ministerio Publico: 1 punto por cada año</td>
+      <td><input type="number" min="0" value="0" ></td>
+      <td><input type="number" min="0" value="0"  disabled></td>
+      <td>4</td>
+    </tr>
+    <tr>
+        <td> 3. Como Docente Universitario: 2 puntos por cada año (pregrado) 2 puntos por modulo o asignatura (posgrado)</td>
+        <td><input type="number" min="0" value="0" ></td>
+        <td><input type="number" min="0" value="0"  disabled></td>
+        <td>2</td>
+      </tr>
+    <tr class="subtotal-row">
+      <td colspan="3">Subtotal (hasta 10 puntos)</td>
+      <td><input type="number" min="0" value="0"  disabled></td>
+    </tr>
+
+    <tr>
+      <td colspan="5"><strong>D. PRODUCCIÓN INTELECTUAL</strong></td>
+    </tr>
+    <tr>
+      <td>Investigacion y publicaciones</td>
+      <td>1. Articulos publicados vinculados al area juridical (1 punto por cada articulo. max. 2 articulos)</td>
+      <td><input type="number" min="0" value="0" ></td>
+      <td><input type="number" min="0" value="0"  disabled></td>
+      <td>2</td>
+    </tr>
+    <tr class="subtotal-row">
+      <td colspan="3">Subtotal (hasta 2 puntos)</td>
+      <td><input type="number" min="0" value="0"  disabled></td>
+    </tr>
+    <tr>
+        <td colspan="3">TOTAL</td>
+        <td><input type="number" min="0" value="0" disabled></td>
+        <td>30</td>
+    </tr>
+    <tr>
+        <td colspan="5"><strong>Nota.- </strong>La autenticidad de la documentacion podra ser verificada por la Escuela de Jueces del Estado cuenado lo considere necesario</td>
+    </tr>
+    <tr>
+        <td colspan="5">Observaciones <br><textarea name="observaciones" id="observaciones" style="width: 90%;"></textarea></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="action-buttons">
+  <button type="button">Guardar</button>
+  <button type="button">Imprimir</button>
+  <button type="button">Cerrar</button>
+</div>
+
+</body>
+</html>
