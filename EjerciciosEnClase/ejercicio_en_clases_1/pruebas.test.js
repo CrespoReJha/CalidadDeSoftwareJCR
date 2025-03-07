@@ -11,5 +11,10 @@ describe('verificarFormacionAcademica', () => {
   test('1 diplomado => 2 puntos', () => {
     expect(verificarFormacionAcademica(1, 0, 0, 0)).toBe(2);
   });
+
+  test('2 diplomados => 3 puntos (2 + 1)', () => {
+    expect(verificarFormacionAcademica(2, 0, 0, 0)).toBe(3);
+  });
+  
 });
 
