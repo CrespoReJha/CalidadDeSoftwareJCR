@@ -6,5 +6,10 @@ describe('verificarFormacionAcademica', () => {
   test('Caso base: sin formación académica => 0 puntos', () => {
     expect(verificarFormacionAcademica(0, 0, 0, 0)).toBe(0);
   });
+
+  // DIPLOMADOS
+  test('1 diplomado => 2 puntos', () => {
+    expect(verificarFormacionAcademica(1, 0, 0, 0)).toBe(2);
+  });
 });
 
