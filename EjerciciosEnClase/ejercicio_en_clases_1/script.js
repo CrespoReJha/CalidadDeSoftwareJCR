@@ -30,7 +30,7 @@ function verificarExperienciaProfesional(antiguedad, experiencia, docencia){
 }
 
 function verificarProduccionIntelectual(articulos){
-    return 0;
+    return articulos;
 }
 
 module.exports = {

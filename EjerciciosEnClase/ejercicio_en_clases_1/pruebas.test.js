@@ -144,4 +144,8 @@ describe('verificarProduccionIntelectual', () => {
   test('0 artículos => 0 puntos', () => {
     expect(verificarProduccionIntelectual(0)).toBe(0);
   });
+  test('1 artículo => 1 punto', () => {
+    expect(verificarProduccionIntelectual(1)).toBe(1);
+  });
+
 });
