@@ -128,4 +128,9 @@ describe('verificarExperienciaProfesional', () => {
   test('6 años de servidor público => max: 4 puntos', () => {
     expect(verificarExperienciaProfesional(0, 6, 0)).toBe(4);
   });
+
+  // Experiencia como docente universitario
+  test('1 año de docencia => 2 puntos', () => {
+    expect(verificarExperienciaProfesional(0, 0, 1)).toBe(2);
+  });
 });
