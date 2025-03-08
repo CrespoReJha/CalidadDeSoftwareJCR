@@ -57,4 +57,9 @@ describe("verificarFormacionAcademica", () => {
   test("sobrepasando el maximo de puntos para doctorados => max: 12 puntos", () => {
     expect(verificarFormacionAcademica(0, 0, 0, 2)).toBe(12);
   });
+
+  // COMBINACIONES
+  test("1 diplomado + 1 especialidad => 2 + 4 = 6 puntos", () => {
+    expect(verificarFormacionAcademica(1, 1, 0, 0)).toBe(6);
+  });
 });
