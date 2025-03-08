@@ -120,4 +120,8 @@ describe('verificarExperienciaProfesional', () => {
   test('1 año de servidor público => 1 punto', () => {
     expect(verificarExperienciaProfesional(0, 1, 0)).toBe(1);
   });
+
+  test('4 años de servidor público => 4 puntos (límite)', () => {
+    expect(verificarExperienciaProfesional(0, 4, 0)).toBe(4);
+  });
 });
