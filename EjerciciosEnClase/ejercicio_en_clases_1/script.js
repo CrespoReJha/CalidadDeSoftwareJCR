@@ -16,7 +16,7 @@ function verificarFormacionAcademica(diplomados, especialidades, maestrias, doct
 }
 
 function verificarActualizacionAcademica(asistencias){
-    return 0;
+    return asistencias * 0.5;
 }
 
 module.exports = {
