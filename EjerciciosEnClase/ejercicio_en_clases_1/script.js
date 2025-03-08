@@ -24,7 +24,7 @@ function verificarExperienciaProfesional(antiguedad, experiencia, docencia){
     let total = 0;
     let puntosAntiguedad = antiguedad > 4 ? 4 : antiguedad;
     let puntosExperiencia = experiencia > 4 ? 4 : experiencia;
-    let puntosDocencia = docencia * 2;
+    let puntosDocencia = docencia > 1 ? 2 : docencia * 2;
     total = puntosAntiguedad + puntosExperiencia + puntosDocencia;
     return total;
 }
