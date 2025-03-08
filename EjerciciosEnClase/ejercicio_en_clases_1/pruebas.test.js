@@ -31,4 +31,8 @@ describe("verificarFormacionAcademica", () => {
   test('2 especialidades => 6 puntos (4 + 2)', () => {
     expect(verificarFormacionAcademica(0, 2, 0, 0)).toBe(6);
   });
+
+  test('sobrepasando el maximos de puntos para especialidad => max: 6 puntos', () => {
+    expect(verificarFormacionAcademica(0, 3, 0, 0)).toBe(6);
+  });
 });

@@ -5,6 +5,7 @@ function verificarFormacionAcademica(diplomados, especialidades, maestrias, doct
     let puntosEspecialidad = especialidades == 0 ? 0 : 4 + ((especialidades - 1) * 2);
 
     puntosDiplomados = puntosDiplomados >= 4 ? 4 : puntosDiplomados; 
+    puntosEspecialidad = puntosEspecialidad >= 6 ? 6 : puntosEspecialidad;
     total = puntosDiplomados + puntosEspecialidad;
     return total;
 }
