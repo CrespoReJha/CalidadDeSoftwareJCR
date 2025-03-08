@@ -11,6 +11,7 @@ function verificarFormacionAcademica(diplomados, especialidades, maestrias, doct
     puntosMaestria = puntosMaestria >= 11 ? 11 : puntosMaestria;
 
     total = puntosDiplomados + puntosEspecialidad + puntosMaestria + puntosDoctorado;
+    total = total >= 12 ? 12 : total;
     return total;
 }
 module.exports = verificarFormacionAcademica
