@@ -1,7 +1,8 @@
 // suma.test.js
 const {
   verificarFormacionAcademica,
-  verificarActualizacionAcademica
+  verificarActualizacionAcademica,
+  verificarExperienciaProfesional
 } = require("./script");
 
 describe("verificarFormacionAcademica", () => {
@@ -94,5 +95,11 @@ describe('verificarActualizacionAcademica', () => {
 
   test('13 asistencias => sigue siendo 6 puntos (máximo)', () => {
     expect(verificarActualizacionAcademica(13)).toBe(6);
+  });
+});
+
+describe('verificarExperienciaProfesional', () => {
+  test('0, 0, 0 => 0 puntos', () => {
+    expect(verificarExperienciaProfesional(0, 0, 0)).toBe(0);
   });
 });

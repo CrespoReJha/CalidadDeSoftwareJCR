@@ -20,7 +20,12 @@ function verificarActualizacionAcademica(asistencias){
     return puntosAsistencia > 6 ? 6 : puntosAsistencia;
 }
 
+function verificarExperienciaProfesional(antiguedad, experiencia, docencia){
+    return 0;
+}
+
 module.exports = {
     verificarFormacionAcademica, 
-    verificarActualizacionAcademica
+    verificarActualizacionAcademica,
+    verificarExperienciaProfesional
 }
