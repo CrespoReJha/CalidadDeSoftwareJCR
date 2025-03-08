@@ -71,4 +71,8 @@ describe("verificarFormacionAcademica", () => {
       expect(verificarFormacionAcademica(1, 1, 1, 0)).toBe(12);
     });
 
+    test('2 diplomados + 2 especialidades + 1 maestría => 3 + 6 + 8 = 17, se capea a 12', () => {
+      expect(verificarFormacionAcademica(2, 2, 1, 0)).toBe(12);
+    });
+  
 });
