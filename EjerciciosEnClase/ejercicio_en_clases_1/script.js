@@ -14,4 +14,12 @@ function verificarFormacionAcademica(diplomados, especialidades, maestrias, doct
     total = total >= 12 ? 12 : total;
     return total;
 }
-module.exports = verificarFormacionAcademica
+
+function verificarActualizacionAcademica(asistencias){
+    return 0;
+}
+
+module.exports = {
+    verificarFormacionAcademica, 
+    verificarActualizacionAcademica
+}

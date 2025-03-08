@@ -1,5 +1,8 @@
 // suma.test.js
-const verificarFormacionAcademica = require("./script");
+const {
+  verificarFormacionAcademica,
+  verificarActualizacionAcademica
+} = require("./script");
 
 describe("verificarFormacionAcademica", () => {
   test("Caso base: sin formación académica => 0 puntos", () => {
@@ -63,16 +66,21 @@ describe("verificarFormacionAcademica", () => {
     expect(verificarFormacionAcademica(1, 1, 0, 0)).toBe(6);
   });
 
-  test('2 diplomados + 1 especialidad => 3 (diplomados) + 4 = 7 puntos', () => {
-      expect(verificarFormacionAcademica(2, 1, 0, 0)).toBe(7);
-    });
+  test("2 diplomados + 1 especialidad => 3 (diplomados) + 4 = 7 puntos", () => {
+    expect(verificarFormacionAcademica(2, 1, 0, 0)).toBe(7);
+  });
 
-    test('1 diplomado + 1 especialidad + 1 maestría => 2 + 4 + 8 = 14, pero el maximo es 12', () => {
-      expect(verificarFormacionAcademica(1, 1, 1, 0)).toBe(12);
-    });
+  test("1 diplomado + 1 especialidad + 1 maestría => 2 + 4 + 8 = 14, pero el maximo es 12", () => {
+    expect(verificarFormacionAcademica(1, 1, 1, 0)).toBe(12);
+  });
 
-    test('2 diplomados + 2 especialidades + 1 maestría => 3 + 6 + 8 = 17, se capea a 12', () => {
-      expect(verificarFormacionAcademica(2, 2, 1, 0)).toBe(12);
-    });
-  
+  test("2 diplomados + 2 especialidades + 1 maestría => 3 + 6 + 8 = 17, se capea a 12", () => {
+    expect(verificarFormacionAcademica(2, 2, 1, 0)).toBe(12);
+  });
+});
+
+describe('verificarActualizacionAcademica', () => {
+  test('0 asistencias => 0 puntos', () => {
+    expect(verificarActualizacionAcademica(0)).toBe(0);
+  });
 });
