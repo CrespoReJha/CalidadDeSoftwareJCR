@@ -53,4 +53,8 @@ describe("verificarFormacionAcademica", () => {
   test("1 doctorado => 12 puntos", () => {
     expect(verificarFormacionAcademica(0, 0, 0, 1)).toBe(12);
   });
+
+  test("sobrepasando el maximo de puntos para doctorados => max: 12 puntos", () => {
+    expect(verificarFormacionAcademica(0, 0, 0, 2)).toBe(12);
+  });
 });
