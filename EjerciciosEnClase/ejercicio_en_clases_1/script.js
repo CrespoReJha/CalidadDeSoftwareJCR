@@ -16,7 +16,8 @@ function verificarFormacionAcademica(diplomados, especialidades, maestrias, doct
 }
 
 function verificarActualizacionAcademica(asistencias){
-    return asistencias * 0.5;
+    let puntosAsistencia = asistencias * 0.5;
+    return puntosAsistencia > 6 ? 6 : puntosAsistencia;
 }
 
 module.exports = {
