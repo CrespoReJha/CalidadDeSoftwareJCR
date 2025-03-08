@@ -29,8 +29,13 @@ function verificarExperienciaProfesional(antiguedad, experiencia, docencia){
     return total;
 }
 
+function verificarProduccionIntelectual(articulos){
+    return 0;
+}
+
 module.exports = {
     verificarFormacionAcademica, 
     verificarActualizacionAcademica,
-    verificarExperienciaProfesional
+    verificarExperienciaProfesional,
+    verificarProduccionIntelectual
 }

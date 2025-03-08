@@ -2,7 +2,8 @@
 const {
   verificarFormacionAcademica,
   verificarActualizacionAcademica,
-  verificarExperienciaProfesional
+  verificarExperienciaProfesional,
+  verificarProduccionIntelectual
 } = require("./script");
 
 describe("verificarFormacionAcademica", () => {
@@ -136,5 +137,11 @@ describe('verificarExperienciaProfesional', () => {
 
   test('2 años de docencia => max: 4 puntos', () => {
     expect(verificarExperienciaProfesional(0, 0, 2)).toBe(2);
+  });
+});
+
+describe('verificarProduccionIntelectual', () => {
+  test('0 artículos => 0 puntos', () => {
+    expect(verificarProduccionIntelectual(0)).toBe(0);
   });
 });
