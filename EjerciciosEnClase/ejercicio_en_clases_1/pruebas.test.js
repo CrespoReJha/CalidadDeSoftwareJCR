@@ -144,12 +144,16 @@ describe('verificarProduccionIntelectual', () => {
   test('0 artículos => 0 puntos', () => {
     expect(verificarProduccionIntelectual(0)).toBe(0);
   });
-  
+
   test('1 artículo => 1 punto', () => {
     expect(verificarProduccionIntelectual(1)).toBe(1);
   });
 
   test('2 artículos => 2 puntos (máximo)', () => {
     expect(verificarProduccionIntelectual(2)).toBe(2);
+  });
+
+  test('5 artículos => max: 2 puntos', () => {
+    expect(verificarProduccionIntelectual(5)).toBe(2);
   });
 });
