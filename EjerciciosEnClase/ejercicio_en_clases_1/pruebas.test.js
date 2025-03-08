@@ -87,4 +87,8 @@ describe('verificarActualizacionAcademica', () => {
   test('1 asistencias => 0.5 puntos', () => {
     expect(verificarActualizacionAcademica(1)).toBe(0.5);
   });
+
+  test('12 asistencias => 6 puntos (0.5 x 12 = 6)', () => {
+    expect(verificarActualizacionAcademica(12)).toBe(6);
+  });
 });
