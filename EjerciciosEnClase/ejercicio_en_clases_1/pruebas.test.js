@@ -133,4 +133,8 @@ describe('verificarExperienciaProfesional', () => {
   test('1 año de docencia => 2 puntos', () => {
     expect(verificarExperienciaProfesional(0, 0, 1)).toBe(2);
   });
+
+  test('2 años de docencia => 4 puntos (límite)', () => {
+    expect(verificarExperienciaProfesional(0, 0, 2)).toBe(4);
+  });
 });
