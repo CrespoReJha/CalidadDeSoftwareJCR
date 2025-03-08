@@ -27,4 +27,8 @@ describe("verificarFormacionAcademica", () => {
   test("1 especialidad => 4 puntos", () => {
     expect(verificarFormacionAcademica(0, 1, 0, 0)).toBe(4);
   });
+
+  test('2 especialidades => 6 puntos (4 + 2)', () => {
+    expect(verificarFormacionAcademica(0, 2, 0, 0)).toBe(6);
+  });
 });
