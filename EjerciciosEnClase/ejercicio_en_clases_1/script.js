@@ -23,7 +23,7 @@ function verificarActualizacionAcademica(asistencias){
 function verificarExperienciaProfesional(antiguedad, experiencia, docencia){
     let total = 0;
     let puntosAntiguedad = antiguedad > 4 ? 4 : antiguedad;
-    total = puntosAntiguedad;
+    total = puntosAntiguedad + experiencia;
     return total;
 }
 

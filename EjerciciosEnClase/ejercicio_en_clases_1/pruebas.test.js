@@ -115,4 +115,9 @@ describe('verificarExperienciaProfesional', () => {
   test('5 años de abogado => max: 4 puntos', () => {
     expect(verificarExperienciaProfesional(5, 0, 0)).toBe(4);
   });
+
+  // Experiencia como servidor público
+  test('1 año de servidor público => 1 punto', () => {
+    expect(verificarExperienciaProfesional(0, 1, 0)).toBe(1);
+  });
 });
