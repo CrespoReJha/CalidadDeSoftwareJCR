@@ -28,11 +28,16 @@ describe("verificarFormacionAcademica", () => {
     expect(verificarFormacionAcademica(0, 1, 0, 0)).toBe(4);
   });
 
-  test('2 especialidades => 6 puntos (4 + 2)', () => {
+  test("2 especialidades => 6 puntos (4 + 2)", () => {
     expect(verificarFormacionAcademica(0, 2, 0, 0)).toBe(6);
   });
 
-  test('sobrepasando el maximos de puntos para especialidad => max: 6 puntos', () => {
+  test("sobrepasando el maximos de puntos para especialidad => max: 6 puntos", () => {
     expect(verificarFormacionAcademica(0, 3, 0, 0)).toBe(6);
+  });
+
+  // MAESTRÍAS
+  test("1 maestría => 8 puntos", () => {
+    expect(verificarFormacionAcademica(0, 0, 1, 0)).toBe(8);
   });
 });
