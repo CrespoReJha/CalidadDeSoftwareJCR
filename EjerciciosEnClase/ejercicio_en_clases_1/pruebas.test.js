@@ -62,4 +62,8 @@ describe("verificarFormacionAcademica", () => {
   test("1 diplomado + 1 especialidad => 2 + 4 = 6 puntos", () => {
     expect(verificarFormacionAcademica(1, 1, 0, 0)).toBe(6);
   });
+
+  test('2 diplomados + 1 especialidad => 3 (diplomados) + 4 = 7 puntos', () => {
+      expect(verificarFormacionAcademica(2, 1, 0, 0)).toBe(7);
+    });
 });
