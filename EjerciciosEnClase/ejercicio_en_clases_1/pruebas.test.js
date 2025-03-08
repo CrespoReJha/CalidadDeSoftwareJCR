@@ -40,4 +40,9 @@ describe("verificarFormacionAcademica", () => {
   test("1 maestría => 8 puntos", () => {
     expect(verificarFormacionAcademica(0, 0, 1, 0)).toBe(8);
   });
+
+  test('2 maestrías => 11 puntos (8 + 3)', () => {
+      expect(verificarFormacionAcademica(0, 0, 2, 0)).toBe(11);
+    });
+
 });
