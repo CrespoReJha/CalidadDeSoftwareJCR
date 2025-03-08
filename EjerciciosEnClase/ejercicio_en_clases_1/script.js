@@ -21,7 +21,9 @@ function verificarActualizacionAcademica(asistencias){
 }
 
 function verificarExperienciaProfesional(antiguedad, experiencia, docencia){
-    return 0;
+    let total = 0;
+    total = antiguedad;
+    return total;
 }
 
 module.exports = {

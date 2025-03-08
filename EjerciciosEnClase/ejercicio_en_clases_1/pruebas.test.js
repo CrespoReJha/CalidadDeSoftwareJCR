@@ -102,4 +102,11 @@ describe('verificarExperienciaProfesional', () => {
   test('0, 0, 0 => 0 puntos', () => {
     expect(verificarExperienciaProfesional(0, 0, 0)).toBe(0);
   });
+
+  // Antigüedad en el ejercicio de la profesión
+  test('1 año de abogado => 1 punto', () => {
+    expect(verificarExperienciaProfesional(1, 0, 0)).toBe(1);
+  });
+
+  
 });
