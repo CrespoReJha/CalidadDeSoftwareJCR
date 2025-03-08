@@ -1,4 +1,3 @@
-//FORMACION ACADEMICA
 function verificarFormacionAcademica(diplomados, especialidades, maestrias, doctorados){
     let total = 0;
     let puntosDiplomados = diplomados == 0 ? 0 : (diplomados - 1) + 2;
@@ -32,7 +31,6 @@ function verificarExperienciaProfesional(antiguedad, experiencia, docencia){
 function verificarProduccionIntelectual(articulos){
     return articulos > 2 ? 2 : articulos;
 }
-
 module.exports = {
     verificarFormacionAcademica, 
     verificarActualizacionAcademica,
